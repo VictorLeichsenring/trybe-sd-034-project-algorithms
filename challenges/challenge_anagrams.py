@@ -4,7 +4,16 @@ def quick_sort_char_list(char_list):
     else:
         pivot = char_list[0]
         less = [x for x in char_list[1:] if x <= pivot]
+        # less = []
+        # for x in char_list[1:]:
+        #     if x <= pivot:
+        #         less.append(x)
         greater = [x for x in char_list[1:] if x > pivot]
+        # greater = []
+        # for x in char_list[1:] :
+        #     if x > pivot:
+        #         greater.append(x)
+
         return (quick_sort_char_list(less)
                 + [pivot] + quick_sort_char_list(greater))
 
